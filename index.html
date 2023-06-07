@@ -1,1 +1,22 @@
-<html><body><iframe src="https://www.roamaround.io/widget" title="Roam Around" width="400" height="300" frameborder="0" allowtransparency="true" scrolling="no"></iframe></body></html>
+<html>
+  <body>
+    <div id="roamaround-widget-container"></div>
+    <script>
+      (function() {
+        var iframe_url = "https://www.roamaround.io/widget?referrer=" + encodeURIComponent(window.location.hostname);
+        var iframe = document.createElement("iframe");
+        iframe.src = iframe_url;
+        iframe.title = "Roam Around";
+        iframe.width = "400";
+        iframe.height = "300";
+        iframe.frameBorder = "0";
+        iframe.allowTransparency = "true";
+        iframe.scrolling = "no";
+    
+        var targetElement = document.getElementById("roamaround-widget-container");
+        targetElement.appendChild(iframe);
+      })();
+    </script>
+    <!-- <iframe src="https://www.roamaround.io/widget" title="Roam Around" width="400" height="300" frameborder="0" allowtransparency="true" scrolling="no"></iframe> -->
+  </body>
+</html>
